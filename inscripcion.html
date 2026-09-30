@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/miEstilo.css">
+    <title>Inscripción - TechAcademy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <h1>TechAcademy</h1>
+        </div>
+        <nav class="navPrincipal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cursos.html">Cursos</a></li>
+                <li><a href="mentorias.html">Mentorias</a></li>
+                <li><a href="inscripcion.html" id="btn_destacado">Inscribirse</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contenedor_principal">
+        <section id="inscripcion_seccion">
+            <h2 style="text-align: center;">Formulario de Inscripción</h2>
+            <p style="text-align: center; margin-bottom: 20px;">Llena tus datos para registrarte en uno de nuestros cursos.</p>
+
+            <!-- Aquí está el method="GET" que pidió investigar -->
+            <form action="inscripcion.html" method="GET" class="formulario_basico">
+                
+                <div class="campo">
+                    <!-- Vinculación semántica: el 'for' coincide con el 'id' -->
+                    <label for="nombre">Nombre completo:</label>
+                    <input type="text" id="nombre" name="nombre_estudiante" required>
+                </div>
+
+                <div class="campo">
+                    <label for="correo">Correo electrónico:</label>
+                    <input type="email" id="correo" name="correo_estudiante" required>
+                </div>
+
+                <div class="campo">
+                    <label for="curso_elegido">Curso de interés:</label>
+                    <select id="curso_elegido" name="curso" required>
+                        <option value="">-- Selecciona un curso --</option>
+                        <option value="frontend">Desarrollo Web FrontEnd</option>
+                        <option value="python">Python Para Ciencia de Datos</option>
+                        <option value="bd">Base de Datos Robustas</option>
+                        <option value="backend">Programa Backend con APIs</option>
+                    </select>
+                </div>
+
+                <div class="campo">
+                    <button type="submit" id="btn_enviar">Enviar Inscripción</button>
+                </div>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechAcademy</p>
+    </footer>
+</body>
+</html>
